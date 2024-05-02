@@ -25,5 +25,27 @@
     <p id="information"><a class="link" href="https://huggingface.co/docs/transformers/en/model_doc/whisper" target=”_blank”>Whisper</a> is a speech-to-text transcription service that uses the <a class="link" href="https://huggingface.co/docs/transformers/en/index" target=”_blank”>Hugging Face Transformers library</a> to transcribe audio files. The service supports multiple model sizes, including Tiny, Base, Small, Medium, and Large. The service is designed to be easy to use and can be accessed via this simple web interface. The service is free to use and does not require any sign-up or registration. However, for full-scale usability, you can implement the service in your own application.<br><br>For more information on this implementation, read the readme file provided in the repository.</p>
 
     <script src="script.js"></script>
+    
+// Firebase    
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyANbZizQiz-awc7yv_pknEKSj8Rssmha0M",
+    authDomain: "whisper-interface.firebaseapp.com",
+    projectId: "whisper-interface",
+    storageBucket: "whisper-interface.appspot.com",
+    messagingSenderId: "778574080948",
+    appId: "1:778574080948:web:5492e25b7583ccc2e2e0e1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+    
 </body>
 </html>
