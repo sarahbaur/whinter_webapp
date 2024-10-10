@@ -8,7 +8,7 @@
     <div class="navbar">
         <div class="logo-container">
             <a href="/" style="text-decoration:none"><img class="logo_nav" src="../static/imgs/logo.png" alt="stylized shush motion logo"></a>
-            <a href="/" style="text-decoration:none"><span class="brand_name">Whisper<span class="brand_name_small">UI</span></span></a>
+            <a href="/" style="text-decoration:none"><span class="brand_name">WH<span class="brand_name_small">INTER</span></span></a>
         </div>
         <div class="nav-icon">
             <div></div>
@@ -20,26 +20,29 @@
             <a href="/variage">VARIAGE</a>
         </div>
     </div>
-    <div class="body_container">
-        <h1>Audio Transcription with Whisper</h1>
-        <form id="uploadForm">
-            <input type="file" id="audiofile" name="audiofile" required>
-            <select name="model_type" id="model_type">
-                <option value="tiny">Tiny</option>
-                <option value="base">Base</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-            </select>
-            <button type="button" onclick="uploadAudio()">Transcribe</button>
-        </form>
-        <h2>Transcription:</h2>
-        <p id="transcription"></p>
-        <div id="loader" style="display: none;"></div>
-        <div class="divider"></div>
-        <h2>Information</h2>
-        <p id="information"><a class="link" href="https://huggingface.co/docs/transformers/en/model_doc/whisper" target=”_blank”>Whisper</a> is a speech-to-text transcription service that uses the <a class="link" href="https://huggingface.co/docs/transformers/en/index" target=”_blank”>Hugging Face Transformers library</a> to transcribe audio files. The service supports multiple model sizes, including Tiny, Base, Small, Medium, and Large. The service is designed to be easy to use and can be accessed via this simple web interface. The service is free to use and does not require any sign-up or registration. However, for full-scale usability, you can implement the service in your own application.<br><br>For more information on this implementation, read the readme file provided in the repository.</p>
+    <h1>A <span class="brand_name">Whisper</span> user <span class="brand_name_small">interface</span> for automatic transcriptions.</h1>
+    <p>
+        Choose an audiofile to upload and your desired Whisper model. For more information on what model size to use, please visit the <a class="link" href="https://huggingface.co/openai/whisper-large">Hugging Face documentation</a>.
+    </p>
+    <form id="uploadForm">
+        <input type="file" id="audiofile" name="audiofile" required>
+        <select name="model_type" id="model_type">
+            <option value="tiny">Tiny</option>
+            <option value="base">Base</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <button type="button" onclick="uploadAudio()">Transcribe</button>
+    </form>
+    <h2>Transcription</h2>
+    <div class="transcription-container">
+        <div id="loader" style="display: none;"></div> <!-- Loader appears when transcription is in progress -->
+        <p id="transcription"></p> <!-- Where transcription text will appear -->
     </div>
+    <div class="divider"></div>
+    <h2>Information</h2>
+    <p class="information"><a class="link" href="https://huggingface.co/docs/transformers/en/model_doc/whisper" target=”_blank”>Whisper</a> is a speech-to-text transcription service that uses the <a class="link" href="https://huggingface.co/docs/transformers/en/index" target=”_blank”>Hugging Face Transformers library</a> to transcribe audio files. The service supports multiple model sizes, including Tiny, Base, Small, Medium, and Large. The service is designed to be easy to use and can be accessed via this simple web interface. The service is free to use and does not require any sign-up or registration. However, for full-scale usability, you can implement the service in your own application.<br><br>For more information on this implementation, read the readme file provided in the repository.</p>
     <script src="../static/js/script.js"></script>
     <script src="../static/js/navbar.js"></script>
 </body>
