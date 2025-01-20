@@ -22,13 +22,17 @@
     </div>
     <h1>A <span class="brand_name_small">Wh</span>isper user <span class="brand_name_small">inter</span>face for automatic transcriptions.</h1>
     <h2>Information</h2>
-    <div class = "transparent_white">
-        <p>Whisper is a speech-to-text transcription service that uses the Hugging Face Transformers library to transcribe audio files. The Whinter web application was created to allow for easy access to Whisper without prior programming knowledge. It is free to use and does not require any sign-up or registration.
-        <p>Currently, Whinter supports multiple Whisper model sizes, including Tiny, Base, and Small. For more information please visit the <a class="link" href="https://huggingface.co/docs/transformers/en/model_doc/whisper" target=”_blank”>Hugging Face documentation</a></p>
-        <p>This service is funded through <a class="link" href="https://www.simonepfenninger.eu">Prof. Dr. Simone Pfenninger</a> at the English Department of the University of Zurich. The webapplication was created and is currently maintained by <a class="link" href="https://www.cl.uzh.ch/de/research-groups/neuro/team/ma/baur.html">Sarah Baur</a>. For any questions or inqueries, please contact <a class="link" href="mailto:sarah.baur@uzh.ch">sarah.baur@uzh.ch</a>.</p>
+    <div class="transparent_white">
+        <p>Whisper is a speech-to-text transcription service that uses the Hugging Face Transformers library to transcribe audio files. The Whinter web application was created to allow users to easily access Whisper without prior programming knowledge. It is free to use and does not require sign-up or registration.</p>
+        <p>Currently, Whinter supports multiple Whisper model sizes, including Tiny, Base, and Small. You can choose between these three model sizes to transcribe your data. With the larger model size (i.e., Tiny > Base > Small), the transcription accuracy is likely to increase, but at the same time, the computational load and transcription time increase, too. Thus, it is advisable to start with the smallest model size and see if the result is sufficient for your needs. This usually works well on high-resource languages such as English and for audio files with clear and standard speech.</p>
     </div>
     <h2>Transcription</h2>
-    <p class="transparent_white">Choose an audio file to upload and your desired Whisper model. Please be patient! It might take a while for your file to be fully transcribed.</p>
+    <div class="transparent_white">
+        <p>Choose an audio file to upload and your desired Whisper model. Please be patient! It might take a while for your file to be fully transcribed.</p>
+        <p><b>Compatible file formats:</b> WAV, MP3, MP4, FLAC, M4A, OGG, WMA, ACC</p>
+        <p><b>Compatible file size:</b> Max. 50 MB</p>
+        <p><b>Languages:</b> Whisper automatically detects the language of your audio file. Available languages and more information can be found <a class="link" href="https://github.com/openai/whisper#available-models-and-languages" target=”_blank”>here</a></p>
+    </div>
     <form id="uploadForm">
         <input type="file" id="audiofile" name="audiofile" required>
         <select name="model_type" id="model_type">
@@ -41,10 +45,17 @@
     <div class="transcription-container">
         <div id="loader" style="display: none;"></div> <!-- Loader appears when transcription is in progress -->
         <p id="transcription"></p> <!-- Where transcription text will appear -->
-    <div class="divider"></div>
+    <div class="divider"> </div>
+    <div class="transparent_white">
+        <p>This service is funded through <a class="link" href="https://www.simonepfenninger.eu" target=”_blank”>Prof. Dr. Simone Pfenninger</a> at the English Department of the University of Zurich. The webapplication was created and is currently maintained by <a class="link" href="https://www.cl.uzh.ch/de/research-groups/neuro/team/ma/baur.html">Sarah Baur</a>. For any questions or inqueries, please contact <a class="link" href="mailto:sarah.baur@uzh.ch">sarah.baur@uzh.ch</a>.</p>
+        <p>The source code of this application is avialable on <a class="link" href="https://github.com/sarahbaur/whinter_webapp" target=”_blank”>GitHub</a></p>
+        <p>If you use this application or its source code in your research, please consider citing it:</p>
+        <p class="source">
+            Baur, S., Pfenninger, S. (2025). <em>Whinter: A Whisper user interface for automatic transcriptions</em> [Computer Software]. GitHub. Retrieved from https://github.com/your-username/whisper-audio-transcription
+        </p>
+    </div>
     <script src="../static/js/script.js"></script>
     <script src="../static/js/navbar.js"></script>
-
 </body>
 <footer>
   <p>© 2025 Copyright by Sarah Baur</p>

@@ -6,7 +6,7 @@ from pydub.silence import split_on_silence
 import re
 
 app = Flask(__name__)
-app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50 MB limit, for example
+app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 
 
 @app.route('/')
@@ -35,6 +35,7 @@ def transcribe_audio():
     # Clean up the uploaded file after processing
     os.remove(filename)
     return jsonify({"transcription": result['text']})
+
 
 @app.route('/transcribe_variage', methods=['POST'])
 def transcribe_variage_audio():
@@ -68,14 +69,12 @@ def transcribe_variage_audio():
         # This sends a 500 plus the error message back to the client
         return jsonify({"error": str(e)}), 500
 
-
 def transcribe_audio_segment(model, audio_segment: AudioSegment) -> str:
     temp_file = "temp_segment.wav"
     audio_segment.export(temp_file, format="wav")
     result = model.transcribe(temp_file)
     os.remove(temp_file)  # Clean up the temporary file
     return result['text']
-
 
 
 def apply_transcription_rules(transcription: str) -> str:
@@ -85,4 +84,4 @@ def apply_transcription_rules(transcription: str) -> str:
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 80)), debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

@@ -5,8 +5,10 @@ from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import argparse
 
+
 def load_whisper_model(model_name: str):
     return whisper.load_model(model_name)
+
 
 def transcribe_audio(model, audio_segment: AudioSegment) -> str:
     temp_file = "temp_segment.wav"
@@ -15,10 +17,12 @@ def transcribe_audio(model, audio_segment: AudioSegment) -> str:
     os.remove(temp_file)  # Clean up the temporary file
     return result['text']
 
+
 def apply_transcription_rules(transcription: str) -> str:
     transcription = re.sub(r'(?<! )\.\.\.(?! )', ' ... ', transcription)
     transcription = re.sub(r'(\s*\.\.\.\s*)+', ' ... ', transcription)
     return transcription.strip()
+
 
 def main(filepath, model_type):
     model = load_whisper_model(model_type)
@@ -28,6 +32,7 @@ def main(filepath, model_type):
     transcription_clean = apply_transcription_rules(transcription)
     os.remove(filepath)  # Remove the uploaded file after processing
     return transcription_clean
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Transcribe audio with Whisper.")
