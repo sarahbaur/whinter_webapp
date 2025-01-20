@@ -32,7 +32,7 @@ def main(filepath, model_type):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Transcribe audio with Whisper.")
     parser.add_argument("input_file", type=str, help="Path to the input audio file.")
-    parser.add_argument("model_type", type=str, choices=['tiny', 'base', 'small', 'medium', 'large'], help="Whisper model type to use for transcription.")
+    parser.add_argument("model_type", type=str, choices=['small'], help="Whisper model type to use for transcription.")
     args = parser.parse_args()
 
     main(args.input_file, args.model_type)
