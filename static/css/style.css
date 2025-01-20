@@ -5,6 +5,18 @@ body, html {
   overflow-x: hidden;
 }
 
+body {
+    background-image: url('/static/imgs/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /* height: 100vh; */ /* Removed */
+    margin: 0;
+    /* background-attachment: fixed; */ /* Optional */
+    transition: background-position 0.5s ease; /* Smooth transition when scrolling */
+}
+
+
 .brand-container {
   text-align: center;
   font-family: 'Arial', sans-serif; /* Example font */
@@ -39,38 +51,30 @@ body, html {
   padding-right: 1rem;
 }
 
-.brand_name {
-  font-size: 2.2rem;
+.brand_name_dark {
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #636b7a;
+  color: #212121;
+  align-self: center; /* Center the text vertically */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 1vw;
+
+}
+
+.brand_name_light {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b4b1ac;
   align-self: center; /* Center the text vertically */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .brand_name_small {
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 2rem;
   text-transform: uppercase;
-  color: #a9a9a9;
-  align-self: center; /* Center the text vertically */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.brand_name_variage {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #BC6366;
-  align-self: center; /* Center the text vertically */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.brand_name_small_variage {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #17394D;
+  color: #212121;
   align-self: center; /* Center the text vertically */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -131,7 +135,7 @@ body, html {
   left: 35vw;
   width: 50%;
   height: 15%;
-  background-color: #ffffff;
+  background-color: transparent;
   flex-direction: row;
   justify-content: space-evenly; /* Center items vertically */
   align-items: center; /* Center items horizontally */
@@ -139,25 +143,21 @@ body, html {
   z-index: 10; /* Ensure it's above other elements */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding-left: 0;
-    background-color: #ffffff;
-}
-
 h1, h2 {
-    color: #424242;
+    color: #6e6e6e;
     padding: 2vw;
+    text-transform: uppercase;
 }
 
 p {
     color: #2f2f2f;
     padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+
 }
 
 form {
-    background: white;
+    background: transparent;
     padding: 2vw;
     border-radius: 8px;
 }
@@ -186,26 +186,26 @@ button:hover {
     justify-content: center; /* Center vertically if needed */
     margin-top: 20px;
     padding: 2vw;
-    background: #f3f3f3;
-    color: #555;
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+}
+
+.transcription-container p {
+    color: #2f2f2f;
 }
 
 .transcription {
     width: 100%; /* Ensures transcription uses full width of the container */
-    height: fit-content
+    height: fit-content;
+    padding: -20vw;
 }
 
-.transcription_container p {
-    color: #2f2f2f;
-    padding: 0;
-}
 
 #loader {
     border: 8px solid #ffffff; /* Light grey */
-    border-top: 8px solid #eabcca; /* Blue */
+    border-top: 8px solid #707070; /* Blue */
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: spin 2s linear infinite;
 }
 
@@ -218,9 +218,9 @@ button:hover {
 
 .information {
     color: #555;
-    margin-top: 1vh;
+    margin-top: -5vh;
     padding: 2vw;
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
 }
 
 .divider {
