@@ -1,4 +1,7 @@
 function uploadAudio() {
+    // Clear any previous transcription
+    document.getElementById('transcription').innerText = '';
+
     const formData = new FormData(document.getElementById('uploadForm'));
     document.getElementById('loader').style.display = 'block'; // Show the spinner
 
