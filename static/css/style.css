@@ -88,66 +88,64 @@ body {
 
 .brand-container:hover .brand_name,
 .brand-container:hover .brand_name_small {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #636b7a;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #636b7a;
 }
 
 /* Hamburger Icon */
 .nav-icon {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px; /* Icon width */
-  height: 30px; /* Icon height */
-  align-self: center; /* Center the icon vertically */
-  margin-right: 2%; /* Align to the right */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Icon width */
+    height: 30px; /* Icon height */
+    align-self: center; /* Center the icon vertically */
+    margin-right: 2%; /* Align to the right */
 }
 
 .nav-icon div {
-  background-color: #333;
-  height: 3px;
-  width: 100%;
-  transition: all 0.3s;
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    transition: all 0.3s;
 }
 
 /* Nav links hidden by default */
 .nav-links {
-  font-weight: bold;
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
+    font-weight: bold;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* Styling for the links when nav is expanded */
 .nav-links a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #333333;
-  padding: 10px;
-  transition: background-color 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #5e6774;
-  font-weight: bold;
+    color: #5e6774;
+    font-weight: bold;
 }
 
 /* Expanded nav */
 .nav-active {
-  display: flex;
-  position: fixed;
-  left: 35vw;
-  width: 50%;
-  height: 15%;
-  background-color: transparent;
-  flex-direction: row;
-  justify-content: space-evenly; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  transition: all 0.10s ease-in-out; /* Smooth transition for the menu */
-  z-index: 10; /* Ensure it's above other elements */
+    display: flex;
+    position: fixed;
+    left: 50vw;
+    width: 50%;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-evenly; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    transition: all 0.10s ease-in-out; /* Smooth transition for the menu */
+    z-index: 10; /* Ensure it's above other elements */
 }
 
 body {
