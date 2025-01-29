@@ -259,16 +259,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to modify a
 If you use this application or its source code in your research, please consider citing it. For example, in APA style:
 
 **APA (7th edition)**:
-> Your Name (2025). *Whisper Audio Transcription Application* [Computer software]. GitHub.
-> Retrieved from [https://github.com/your-username/whisper-audio-transcription](https://github.com/your-username/whisper-audio-transcription)
-
-Or, in BibTeX format:
-
-```bibtex
-@misc{YourName2025,
-  author       = {Your Name},
-  title        = {Whisper Audio Transcription Application},
-  howpublished = {\url{https://github.com/your-username/whisper-audio-transcription}},
-  year         = 2025,
-  note         = {Accessed: Month Day, Year}
-}
+> Baur, S., Pfenninger, S. (2025). *Whinter: A Whisper user interface for automatic transcriptions* [Computer software]. GitHub. Retrieved from [https://github.com/sarahbaur/whinter_webapp.git](https://github.com/sarahbaur/whinter_webapp.git)
